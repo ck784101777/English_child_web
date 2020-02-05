@@ -1,0 +1,31 @@
+﻿/*主页内容*/
+.main {margin:0 auto;width:977px;background:url("../images/yrepeat_1.png");}
+.main_left{float:left;padding-left:17px; width:650px;}
+.main_left .top{margin:15px 20px;}
+.main_left .top a{color: #2BBED8;font-size: 12px;text-decoration: none;}
+.position{font-weight:bold;border-bottom: 1px solid #4C4C4C;font-size:14px;line-height:36px;width:630px}
+.main_left_content{float:left;margin:5px 0 0 10px; overflow: hidden; width:620px; display:inline;}
+.main_left_content h1{font-family: Arial;font-size:18px;font-weight: bold;height: 30px;line-height: 30px;text-align: center;width: 100%;color:#955B9F;}
+.main_left_content .add_time{height:22px;line-height:22px;text-align: center;}
+.main_left_content .add_time a{margin-left:25px;color: #2BBED8;text-decoration: none;}
+.main_left_content .content{margin: 0 auto;}
+.main_left_content .content p{line-height:180%;text-indent:28px;font-size:14px;margin: 6px 0;}
+.main_left_content .content p a{}
+
+.content a, .content a:link, .content a:focus, .content a:hover {
+text-decoration: initial;
+border-bottom: 0.1em dashed #2C629E;
+color: #28B3DB;
+}
+.lpn{width:620px;margin:5px 0px;padding:5px 0px;height:20px;line-height:140%;font-size:14px;background:#f8f8f8;overflow:hidden}
+.lpn a{color:#28B3DB}
+.lpn a:hover{text-decoration:underline;}
+.lpre{width:300px;float:left;overflow:hidden;height:20px;}
+.lnext{width:310px;padding-left:10px;float:right;overflow:hidden;height:20px;}
+
+.similer{width:620px;float:left;padding:5px 0px;margin:5px 0px;}
+.similer .title{font-size:14px;font-weight:bold;color:#000000}
+.similer ul .title{width:620px;float:left}
+.similer ul li{width:300px;float:left;padding-right:10px;line-height:180%;font-size:14px;overflow:hidden;height:25px;}
+.similer ul li a{color:#000000}
+.similer ul li a:hover{text-decoration:underline;}

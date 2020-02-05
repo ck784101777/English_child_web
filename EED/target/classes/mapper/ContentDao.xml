@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smart.dao.ContentDao">
+
+    <!--添加-->
+    <insert id="addContent" parameterType="com.smart.domain.Content">
+        insert  into content(fromName, typeName, text, createTime, urlContext, title,visitNum) values (#{fromName}, #{typeName}, #{text}, #{createTime}, #{urlContext}, #{title},#{visitNum})
+    </insert>
+    <!--修改-->
+    <update id="updateContent" parameterType="int">
+        update content
+        <trim prefix="set" suffixOverrides=",">
+            <if test="visitNum!=null">visitNum=#{visitNum},</if>
+            <if test="urlContext!=null">urlContext=#{urlContext},</if>
+            <if test="fromName!=null">fromName=#{fromName},</if>
+            <if test="title!=null">title=#{title},</if>
+            <if test="createTime!=null">createTime=#{createTime},</if>
+            <if test="text!=null">text=#{text},</if>
+            <if test="typeName!=null">typeName=#{typeName},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!--删除-->
+    <select id="deleteContent" parameterType="int">
+        delete from content where id=#{id}
+    </select>
+
+    <!--查找-->
+    <select id="selectContent" parameterType="int" resultType="com.smart.domain.Content" >
+        select *from content where id=#{id}
+    </select>
+
+    <select id="getAll"  resultType="com.smart.domain.Content" >
+        select *from content
+    </select>
+
+    <select id="selectContentByType" parameterType="com.smart.domain.Content" resultType="com.smart.domain.Content" >
+        select *from content where typeName=#{typeName}
+    </select>
+
+    <select id="selectContentByTypeTop" parameterType="com.smart.domain.Content" resultType="com.smart.domain.Content" >
+        select *from content where typeName=#{typeName} order by visitNum desc
+    </select>
+
+</mapper>

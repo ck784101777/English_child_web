@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smart.dao.SourceDao">
+    <!--添加-->
+    <insert id="addSource" parameterType="com.smart.domain.Source">
+        insert  into source(sourceName) values (#{sourceName})
+    </insert>
+    <!--修改-->
+    <update id="updateFrom" parameterType="com.smart.domain.Source">
+        update source
+        <trim prefix="set" suffixOverrides=",">
+            <if test="sourceName!=null">sourceName=#{sourceName},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!--删除-->
+    <select id="deleteSource" parameterType="com.smart.domain.Source">
+        delete from source where sourceName=#{sourceName}
+    </select>
+
+    <!--查找-->
+    <select id="selectSource" parameterType="com.smart.domain.Source" resultType="com.smart.domain.Source" >
+        select *from source where sourceName=#{sourceName}
+    </select>
+
+    <select id="getAll" resultType="com.smart.domain.Source">
+        select  *from source
+    </select>
+
+</mapper>

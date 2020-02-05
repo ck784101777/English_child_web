@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smart.dao.AdminDao">
+
+    <!--添加-->
+    <insert id="addAdmin" parameterType="com.smart.domain.Admin">
+        insert  into admin(userName,passWord) values (#{userName},#{passWord})
+    </insert>
+    <!--修改-->
+    <update id="updateAdmin" parameterType="com.smart.domain.Admin">
+        update admin
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userName!=null">userName=#{userName},</if>
+            <if test="passWord!=null">passWord=#{passWord},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!--删除-->
+    <select id="deleteAdmin" parameterType="com.smart.domain.Admin">
+        delete from admin where userName=#{userName}
+    </select>
+
+    <!--查找-->
+    <select id="selectAdmin" parameterType="com.smart.domain.Admin" resultType="com.smart.domain.Admin" >
+        select *from admin where userName=#{userName} and passWord=#{passWord}
+    </select>
+
+</mapper>

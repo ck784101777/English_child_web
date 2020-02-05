@@ -1,0 +1,11 @@
+﻿/*主页内容*/
+.main {margin:0 auto;width:977px;background:url("../images/yrepeat_1.png");}
+.main_left{float:left;  padding-left:17px; width:650px;}
+.main_left .top{margin:15px 20px;}
+.main_left .top a{color: #2BBED8;font-size: 12px;text-decoration: none;}
+.position{font-weight:bold;border-bottom: 1px solid #4C4C4C;font-size:14px;line-height:36px;width:630px}
+.main_left_content{display:inline;float:left;margin:3px 0 0 10px; overflow: hidden; width:605px; display:inline;}
+.main_left_content_L{float:left;}
+.main_left_content_L a{ color: #4C4C4C;cursor: pointer;font-family:Arial;line-height:180%;text-decoration: none;font-size:14px;}
+.main_left_content_L a:hover{color: #955B9F; cursor:pointer;text-decoration: underline;}
+.main_left_content_R{float:right;}

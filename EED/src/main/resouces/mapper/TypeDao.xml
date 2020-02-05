@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smart.dao.TypeDao">
+
+    <!--添加-->
+    <insert id="addType" parameterType="com.smart.domain.Type">
+        insert  into type(typeName) values (#{typeName})
+    </insert>
+    <!--修改-->
+    <update id="updateType" parameterType="com.smart.domain.Type">
+        update type
+        <trim prefix="set" suffixOverrides=",">
+            <if test="typeName!=null">typeName=#{typeName},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!--删除-->
+    <select id="deleteType" parameterType="com.smart.domain.Type">
+        delete from type where typeName=#{typeName}
+    </select>
+
+    <!--查找-->
+    <select id="selectType" parameterType="com.smart.domain.Type" resultType="com.smart.domain.Type" >
+        select *from type where typeName=#{typeName}
+    </select>
+
+    <select id="getAll" resultType="com.smart.domain.Type">
+        select  *from type
+    </select>
+</mapper>

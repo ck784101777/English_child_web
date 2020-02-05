@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>插入音乐</title>
+    <script type="text/javascript" src="../internal.js"></script>
+    <link rel="stylesheet" type="text/css" href="music.css">
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body>
+<div class="wrapper" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc3-43" data-genuitec-path="/BulletinBoardSystem/WebRoot/utf8-jsp/dialogs/music/music.html">
+    <div class="searchBar">
+        <input id="J_searchName" type="text"/>
+        <input type="button" class="searchBtn" id="J_searchBtn">
+    </div>
+    <div class="resultBar" id="J_resultBar">
+        <div class="loading" style="display:none"></div>
+        <div class="empty"><var id="lang_input_tips"></var></div>
+    </div>
+    <div id="J_preview"></div>
+</div>
+<script type="text/javascript" src="music.js"></script>
+<script type="text/javascript">
+    var music = new Music;
+    dialog.onok = function () {
+        music.exec();
+    };
+    dialog.oncancel = function () {
+        $G('J_preview').innerHTML = "";
+    };
+</script>
+</body>
+</html>
