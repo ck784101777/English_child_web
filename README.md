@@ -30,8 +30,20 @@ views下是所有的.jsp页面文件
 
 web.xml是前端的核心配置文件
 
-![img](file:///C:\Users\Administrator\AppData\Roaming\Tencent\Users\784101777\TIM\WinTemp\RichOle\JBGP`5TFN9(T)Z_QY4DDK03.png)
+![img](https://github.com/ck784101777/English_child_web/blob/master/photos/JBGP%605TFN9(T)Z_QY4DDK03.png?raw=true)
+
+## 运行步骤：
+1.导入数据库文件，在sql下
+2.导入war包，如果是要运行在tomcat下的话，war包再EED/target下
+3.如果要导入到eclipse或者idea下的话，直接打开项目即可
 
 ## 
 
 ## 部分截图：
+
+![img](https://github.com/ck784101777/English_child_web/blob/master/photos/UZCTY18)U}A5NG)SU(`%F2Q.png?raw=true)
+![img](https://github.com/ck784101777/English_child_web/blob/master/photos/UO13H3VQNBIB1{1L}T)M[%3.png?raw=true)
+![img](https://github.com/ck784101777/English_child_web/blob/master/photos/3%_6J]%IQ$95J_~N57VR6W6.png?raw=true)
+
+
+
